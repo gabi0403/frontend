@@ -1,0 +1,48 @@
+.card{
+    width: 120px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: 1px;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 90%;
+    flex-wrap: wrap;
+}
+button{
+    padding: 5px 10px;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: wait;
+    background-color: #aaa;
+    border: none;
+}
+
+.darkMode {
+    background-color: #222;
+    color: white;
+}
+
+/* Esconde o checkbox real */
+#darkMode {
+    display: none;
+}
+
+/* Estiliza o rótulo que agirá como botão */
+.switch-label {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: transform 0.3s ease;
+    user-select: none;
+    z-index: 1000;
+}
+
+.switch-label:hover {
+    transform: scale(1.2);
+}
