@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalho de Credenciamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="alternar-tema" class="botao-flutuante">🌓_🌗</button>
+
+    <div class="container">
+        <h1>Gestão de Convidados</h1>
+
+        <div class="layout">
+            <div class="coluna-cadastro">
+                <h2>Cadastro</h2>
+                <form id="formulario-evento">
+                    <input type="text" id="campo-nome" placeholder="Nome Completo">
+                    <input type="email" id="campo-email" placeholder="E-mail">
+                    <input type="text" id="campo-cpf" placeholder="CPF">
+                    <input type="text" id="campo-empresa" placeholder="Empresa/Cargo">
+                    
+                    <select id="campo-ingresso">
+                        <option value="">Selecione o Ingresso</option>
+                        <option value="VIP">VIP</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Staff">Staff</option>
+                    </select>
+
+                    <p id="mensagem-erro" style="color: red; font-weight: bold;"></p>
+                    
+                    <button type="submit" id="btn-enviar">Enviar Dados</button>
+                </form>
+            </div>
+
+            <div class="coluna-lista">
+                <h2>Lista de Confirmados</h2>
+                <div id="lista-presenca">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
