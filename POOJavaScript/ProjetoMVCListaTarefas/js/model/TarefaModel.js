@@ -14,7 +14,7 @@ export class TarefaModel{
 
     //métodos
     //adicionar tarefa (create)
-    addTarefas(titulo){
+    addTarefa(titulo){
         const newTarefa = {
             id: this.currentId++,
             titulo: titulo,
@@ -32,18 +32,18 @@ export class TarefaModel{
     atualizarTarefa(id){
         const tarefa = this.tarefas.find(tarefa => tarefa.id === id);
         if(tarefa){ //se tarefa for encontrada
-            tarefa.completed = !this.tarefas.completed; //inverter o valor da booleana
+            tarefa.completed = !tarefa.completed; //inverter o valor da booleana
         }
     }
 
     //remover a tarefa do vetor (delete)
-    removeTarefa(id){
+    removerTarefa(id){
         this.tarefas = this.tarefas.filter(tarefa => tarefa.id !== id)
     }
 
 }
 
-// o que foi Feito?
+// o que foi feito?
 //um crud
 //criamos um vetor de tarefas
 // geramos um id automatico para as tarefas
