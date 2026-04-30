@@ -17,7 +17,7 @@ export class QuitandaModel {
     return this.historico;
   }
 
-  // Função para adicionar um novo produto (CREATE do CRUD)
+// Função para adicionar um novo produto
   adicionarProduto(nome, categoria, preco, quantidade) {
     // Valida se o produto já existe no vetor
     const existe = this.produtos.find(
@@ -34,7 +34,7 @@ export class QuitandaModel {
 
     // Cria o objeto do novo produto
     const novoProduto = {
-      id: this.idAtual++, // Usa o ID atual e depois soma +1
+      id: this.idAtual++, // Usa o id atual e depois soma +1
       nome: nome,
       categoria: categoria,
       preco: parseFloat(preco), // Garante que o preço é decimal
@@ -44,15 +44,11 @@ export class QuitandaModel {
     // Adiciona no vetor de produtos
     this.produtos.push(novoProduto);
 
-    // Registra no histórico (Entrada)
-    this.registrarHistorico(
-      "Entrada",
-      novoProduto.nome,
-      novoProduto.quantidade,
-    );
+    // Registra no histórico
+    this.registrarHistorico("Entrada",novoProduto.nome,novoProduto.quantidade);
   }
 
-  // Função para adicionar mais unidades a um produto que já existe (UPDATE do CRUD)
+  // Função para adicionar mais unidades a um produto que já existe
   atualizarEstoque(id, quantidadeAdicional) {
     const produto = this.produtos.find((produto) => produto.id === id);
 
@@ -63,13 +59,12 @@ export class QuitandaModel {
           `O estoque total não pode passar de ${this.limiteMaximo}.`,
         );
       }
-
       produto.quantidade += parseInt(quantidadeAdicional); // Soma a quantidade
       this.registrarHistorico("Reposição", produto.nome, quantidadeAdicional);
     }
   }
 
-  // Função para dar baixa no estoque quando ocorre uma venda (UPDATE do CRUD)
+  // Função para dar baixa no estoque quando ocorre uma venda
   venderProduto(id, quantidadeVendida) {
     const produto = this.produtos.find((produto) => produto.id === id);
 
