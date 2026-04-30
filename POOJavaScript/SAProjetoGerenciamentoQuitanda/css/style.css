@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.section-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.section-card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #555;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.form-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input {
+    flex: 1 1 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 16px;
+    cursor: pointer;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 5px solid #28a745;
+}
+
+li.historico-item {
+    border-left: 5px solid #17a2b8;
+    font-size: 0.9rem;
+}
+
+.info span {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info strong {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.action {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-vender {
+    background: #dc3545;
+}
+
+.btn-vender:hover {
+    background: #c82333;
+}
+
+.btn-atualizar {
+    background: #007bff;
+}
+
+.btn-atualizar:hover {
+    background: #0069d9;
+}
+
+#mensagem {
+    font-weight: bold;
+    margin-top: 15px;
+    min-height: 20px;
+}
+
+.msg-erro {
+    color: red;
+}
+
+.msg-sucesso {
+    color: green;
+}

@@ -203,7 +203,7 @@ O Sistema deve:
 
 #### RF-005: Histórico de Movimetações
 
-**Descrição:** Permitir o Registro de Movimentações ( Entrada e Saída) de Produtos
+**Descrição:** Permitir o Registro de Movimentações (Entrada e Saída) de Produtos
 
 - **Prioridade:** Média
 - **Versão:** 1.0
@@ -259,7 +259,7 @@ Tabela de regras de negócio
 
 --- 
 
-Podem Existir Restrições para o Negócio (legais, movimentação, local, etc)
+Podem existir restrições para o negócio (legais, movimentação, local, etc)
 
 ## 5. Modelos do Sistema
 
@@ -418,4 +418,3 @@ flowchart LR
     RF-004 --> UC4
 
 ```
-

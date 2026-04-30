@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Quitanda</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Quitanda</h1>
+        
+        <!-- cadastro de produtos -->
+        <div class="section-card">
+            <h2>Cadastrar Novo Produto</h2>
+            <div class="form-area">
+                <input type="text" id="nomeInput" placeholder="Nome do Produto">
+                <input type="text" id="catInput" placeholder="Categoria (ex: Fruta)">
+                <input type="number" id="precoInput" placeholder="Preço (R$)" min="0" step="0.01">
+                <input type="number" id="qtdInput" placeholder="Quantidade Inicial" min="0">
+                <button id="addProdutoBtn">Cadastrar</button>
+            </div>
+            <p id="mensagem"></p>
+        </div>
+        <!-- quando terminar aq, monta o css -->
+        <!-- estoque -->
+        <div class="section-card">
+            <h2>Estoque Atual</h2>
+            <ul id="listaEstoque"></ul>
+        </div>
+
+        <!-- histórico -->
+        <div class="section-card">
+            <h2>Histórico de Movimentações</h2>
+            <ul id="listaHistorico"></ul>
+        </div>
+    </div>
+    
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
