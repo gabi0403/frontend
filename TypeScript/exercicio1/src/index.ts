@@ -8,7 +8,6 @@ interface Usuario{
 }
 
 // renderizar perfil do usuario
-
 function renderizarPerfil(usuario: Usuario): void{
     if(usuario.isAdmin){
         console.log(`Usuário Administrador: ${usuario.nome} (${usuario.email})`);
@@ -18,20 +17,20 @@ function renderizarPerfil(usuario: Usuario): void{
 }
 
 // fazendo teste com a função de renderizar
-const usuario1: Usuario = {
+const admin: Usuario = {
     id: 1,
     nome: "Emily",
     email: "emily@email.com",
     isAdmin: true
 }
-renderizarPerfil(usuario1);
+renderizarPerfil(admin);
 
 
-const usuario2: Usuario = {
+const cliente: Usuario = {
   id: 2,
   nome: "Evelyn",
   email: "evelyn@email.com",
   isAdmin: false,
 };
 
-renderizarPerfil(usuario2);
+renderizarPerfil(cliente);
