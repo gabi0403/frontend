@@ -3,7 +3,7 @@
   "version": 1,
   "cli": {
     "packageManager": "npm",
-    "analytics": "fde1bc2f-b5e1-4be0-8263-69b49e4c7757"
+    "analytics": "0c302d88-e63c-431c-a24f-be6758f1961a"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -26,8 +26,17 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
-            ]
+            ],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "security": {
+              "allowedHosts": []
+            },
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
