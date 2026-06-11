@@ -1,0 +1,58 @@
+<div class="cadastro-container">
+  <h2>Cadastrar Meu Currículo</h2>
+
+  <form (ngSubmit)="cadastrarCurriculo()">
+
+    <div class="form-group">
+      <label for="nome">Nome Completo *</label>
+      <input
+        type="text"
+        id="nome"
+        name="nomeCompleto"
+        [(ngModel)]="curriculo.nomeCompleto"
+        placeholder="Digite seu nome completo">
+    </div>
+
+    <div class="form-group">
+      <label for="formacao">Formação Acadêmica *</label>
+      <input
+        type="text"
+        id="formacao"
+        name="formacao"
+        [(ngModel)]="curriculo.formacao"
+        placeholder="Ex: Bacharel em Ciência da Computação">
+    </div>
+
+    <div class="form-group">
+      <label for="experiencia">Experiência Profissional *</label>
+      <textarea
+        id="experiencia"
+        name="experiencia"
+        [(ngModel)]="curriculo.experiencia"
+        placeholder="Descreva suas experiências profissionais anteriores"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="habilidades">Habilidades *</label>
+      <input
+        type="text"
+        id="habilidades"
+        name="habilidades"
+        [(ngModel)]="curriculo.habilidades"
+        placeholder="Ex: Angular, TypeScript, HTML, CSS">
+    </div>
+
+    <div class="form-group">
+      <label for="linkedin">Link do LinkedIn</label>
+      <input
+        type="url"
+        id="linkedin"
+        name="linkedinUrl"
+        [(ngModel)]="curriculo.linkedinUrl"
+        placeholder="https://linkedin.com/in/seu-perfil">
+    </div>
+
+    <button type="submit" class="btn-enviar">Salvar Currículo</button>
+
+  </form>
+</div>

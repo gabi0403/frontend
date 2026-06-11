@@ -1,0 +1,74 @@
+<div class="painel-container">
+  <h2>Painel de Controle de Currículos (Área do ADM)</h2>
+
+  <div class="form-edicao-container">
+    <h3>Editar Currículo Selecionado</h3>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Nome do Candidato:</label>
+        <input type="text" name="editNome" [(ngModel)]="curriculo.nomeCompleto">
+      </div>
+
+      <div class="form-group">
+        <label>Formação:</label>
+        <input type="text" name="editFormacao" [(ngModel)]="curriculo.formacao">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Experiência:</label>
+      <textarea name="editExperiencia" [(ngModel)]="curriculo.experiencia"></textarea>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Habilidades:</label>
+        <input type="text" name="editHabilidades" [(ngModel)]="curriculo.habilidades">
+      </div>
+
+      <div class="form-group">
+        <label>LinkedIn:</label>
+        <input type="text" name="editLinkedin" [(ngModel)]="curriculo.linkedinUrl">
+      </div>
+    </div>
+
+    <button (click)="atualizarCurriculo(curriculo.id)" class="btn-atualizar">Salvar Alterações</button>
+  </div>
+
+  <hr>
+
+  <h3>Todos os Currículos Cadastrados</h3>
+
+  <table class="tabela-dados">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Candidato</th>
+        <th>Formação</th>
+        <th>LinkedIn</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (c of curriculos; track c.id) {
+        <tr>
+          <td>{{ c.id }}</td>
+          <td><strong>{{ c.nomeCompleto }}</strong></td>
+          <td>{{ c.formacao }}</td>
+          <td>{{ c.linkedinUrl || 'Não informado' }}</td>
+          <td>
+            <button (click)="selecionarCurriculo(c)" class="btn-acao-editar">Editar</button>
+            <button (click)="excluirCurriculo(c.id)" class="btn-acao-excluir">Excluir</button>
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="5" style="text-align: center; padding: 20px;">
+            Nenhum currículo encontrado na base de dados.
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
