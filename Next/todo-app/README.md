@@ -44,3 +44,27 @@ flowchart TB
     style NEXT fill:#340034
 ```
  
+## Escopo do Projeto
+
+### FrontEnd (Next.js/React)
+
+- exibição da lista de tarefas;
+- formulário para adicionar novas tarefas;
+- botão para alternar status (concluída ou pendente);
+- botão para excluir tarefas;
+- atualização dinâmica da interface sem recarregar a página.
+
+### BackEnd (Next.js API Routes)
+
+- `GET /api/todos`: retorna todas as tarefas;
+- `POST /api/todos`: cria uma nova tarefa;
+- `PUT /api/todos/[id]`: atualiza uma tarefa existente;
+- `DELETE /api/todos/[id]`: remove uma tarefa.
+
+
+### Banco de Dados (MongoDB)
+
+- armazenamento das tarefas;
+- persistência do título e do status de conclusão;
+- conexão segura e reutilizável com o banco.
+
